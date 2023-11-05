@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0
+}
+.mr-cont {
+	margin: 20px auto;
+	height: 3080px;
+	width: 1060px;
+	border: 1px solid #f00;
+	background: rgba(192,192,192,0.4)
+}
+.mr-top {
+	padding: 20px auto;
+	height: 500px
+}
+.mr-nav {
+	width: 1000px;
+	height: 30px
+}
+.mr-nav ul {
+	margin-left: 67px;
+	height: 37px;
+	width: 945px;
+	list-style: none;
+	background: #C03;
+	text-align: center
+}
+.mr-nav ul li {
+	float: left;
+	margin: 7px auto;
+	width: 150px;
+	font-size: 20px
+}
+.mr-nav ul li a {
+	color: #FFF;
+	font-weight: 900
+}
+.mr-phone {
+	margin: 5px 0;
+	height: 490px
+}
+.rongyao {
+	background: rgba(0,255,255,0.3);
+}
+.mate8 {
+	background: rgba(255,223,0,0.2)
+}
+.p8 {
+	background: rgba(255,144,0,0.2)
+}
+.huawei {
+	background: rgba(255,0,96,0.2)
+}
+.g9 {
+	background: rgba(144,0,255,0.2)
+}
+.mr-txt {
+	margin-left: 50px;
+	height: 560px;
+	width: 975px
+}
+.mr-pic {
+	margin: 20px 20px;
+	float: left;
+	border: 1px solid #9c9c9c
+}
+.mr-pic img{
+	width: 200px;
+	height: auto;
+}
+a {
+	text-decoration: none
+}
+.mr-banner {
+	margin-left: 67px
+}

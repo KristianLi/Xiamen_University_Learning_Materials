@@ -1,0 +1,10 @@
+@charset "utf-8";
+.mr-content{
+	width: 1100px;
+	height:420px;
+	border: 1px solid red;
+	margin: 0 auto;
+	background: url(../images/bg.jpg) no-repeat right top;
+	text-align: left;
+}
+
