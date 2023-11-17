@@ -5,7 +5,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
-#include "error.h"
+#include <error.h>
 #include "stdlib.h"
 
 
@@ -13,7 +13,7 @@
 #define MAX_LINE_LENGTH 256 // 假设每行最多256个字符
 
 void readClassTable(char students[MAX_STUDENTS][MAX_LINE_LENGTH]) {
-    FILE *file = fopen("../ClassTable.txt", "r");
+    FILE *file = fopen("./ClassTable.txt", "r");
     if (file == NULL) {
         perror("Error opening file");
         exit(EXIT_FAILURE);
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
     /* 指定服务器地址 */
 	server_addr.sin_family = AF_INET;
-	server_addr.sin_port = htons(atoi(argv[1]));
+    server_addr.sin_port = htons(atoi(argv[1]));
 	server_addr.sin_addr.s_addr = htonl(INADDR_ANY); //INADDR_ANY表示本机所有IP地址
 	memset(&server_addr.sin_zero, 0, sizeof(server_addr.sin_zero)); //零填充
 
@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 	bind(server_sock_listen, (struct sockaddr *)&server_addr, sizeof(server_addr));
 
 	/* 监听socket */
-	listen(server_sock_listen, 0);
+	listen(server_sock_listen, 1);
 
 	server_sock_data = accept(server_sock_listen, NULL, NULL);
 
@@ -77,7 +77,7 @@ int main(int argc, char *argv[])
         recv(server_sock_data, recv_msg, sizeof(recv_msg), 0);
         printf("client:%s\n",recv_msg);
         if (strcmp(recv_msg, "bye") == 0) {
-            strcpy(recv_msg,"bye");
+            printf("bye\n");
             break;
         }
         int i=0;
